@@ -1,0 +1,55 @@
+/* src/components/Map/MapView.css */
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 1px;
+  background: #333;
+  border: 4px solid #555;
+  aspect-ratio: 1 / 1; /* 정사각형 유지 */
+  width: 100%;
+  max-width: 600px;
+}
+
+.cell {
+  background: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  overflow: hidden;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.building {
+  border: 1px solid rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: black;
+}
+
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+}
+.char-dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  margin: 1px;
+}
+.char-dot.player {
+  background: #ff4757;
+  color: white;
+  transform: scale(1.2);
+  z-index: 10;
+}
+.turn-text { color: #fffa65; font-weight: bold; }
